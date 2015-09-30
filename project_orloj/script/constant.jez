@@ -1,0 +1,305 @@
+// konstanty book engine
+// pozice
+var book_pos_Top    := -2000000000; // Levy, nebo Horni okraj
+var book_pos_Center := -2010000000; // stred
+var book_pos_Bottom := -2020000000; // Pravy, nebo Spodni okraj
+var book_pos_Auto   := -2030000000; // automaticke pridavani
+
+// rychlost dynamiky
+var dyna_speed_LIN := 0; // rychlost linearni
+var dyna_speed_SIN := 1; // rychlost SINisidova 
+var dyna_speed_COS := 2; // rychlost COSinusodiva 
+var dyna_speed_SIN2:= 3; // rychlost SINisidova / 2 zpomalene 
+var dyna_speed_COS2:= 4; // rychlost COSinusodiva /2 zrychlene
+
+// typ fontu
+var fsBold := 1;
+var fsItalic := 2; 
+var fsUnderline := 4; 
+var fsStrikeOut := 8;
+
+// stavy tlacitka
+var btOnDeactive := 0;
+var btOnActive := 1;
+var btOnClick := 3;
+
+//=======================
+// styl hry 
+var tm_RT = 0; // RT = real time
+var tm_TB = 1; // TB = turn base
+
+// vlastnik jednotky
+var pl_Hrac := 0;
+var pl_Neutral := 1;
+var pl_Nepritel := 2;
+
+// rasa jednotek
+var ra_Unknovn := 0;
+var ra_Barbar := 1; 
+var ra_Trpaslik := 2;
+var ra_Elf = 3;
+var ra_Clovek = 4;
+var ra_Magicky = 5;
+var ra_Zvire = 6;
+var ra_Stroj = 7
+
+// misto pro Itemy
+var mi_None := 0;
+var mi_Odev := 1; // misto kam se dava zborj
+var mi_RukaR := 2; // pRava ruka
+var mi_RukaL := 3; // Leva ruka
+var mi_Toulec := 4; // misto pro naboje
+var mi_Bag := 5; // bagaz
+
+// Id Item
+var itm_Mec := 1;
+var itm_Stit := 2;
+var itm_Zbroj := 3;
+var itm_Zlataky := 4;
+var itm_Luk := 5;
+var itm_Sip := 6;
+var itm_Bambitka := 16;
+
+// pridana vlastnost veci tItem.SetProperty a tItem.GetProperty
+var i_none := 0;
+var i_UtocneCislo_zblizka := 1;
+var i_UtocneCislo_zdalky: = 2;
+var i_ObranneCislo := 3;
+var i_Regenerace_Zivoty := 4;
+var i_Regenerace_Mana := 5;
+var i_SilaKouzel := 6;
+var i_ObranaPredKouzly := 7;
+var i_AkcniBody := 8;
+var i_Zrucnost := 9;
+var i_Dohled := 10;
+var i_Zivoty_Max := 11;
+var i_Mana_Max := 12;
+var i_Neviditelny := 13;
+var i_Bistrozraky := 14;
+
+var tp_All := 0; 
+var tp_OvlPlayer := 1; 
+var tp_SelectPlayer := 2;            
+
+var tr_All := 0;
+var tr_OnPlace := 1;            
+
+var sr_None := 0; 
+var sr_Abeceda :=1; 
+var sr_Nejbliz := 2;
+// Id Unit
+//var idUnit_Alchymista := 4;
+/*
+================================================================================
+    REFERENCE script jazyka 
+    =======================
+
+"~*.ini"              Definice globalniho sveta. (kde ktera mapa lezi)  
+"~*.jez"              Script globalni. (fce OnStartMap )
+"globalValue.ini"     Globalni hodnoty ve hre. (existuje az pri hrani hry, ne pri navrhu) Viz fce gValueRead a gValueWrite
+
+"*.map"               Lokalni mapa editovana v Editoru map.
+"-||-.jez"            Script lokalni mapy  
+"-||-.ini"            lokalni hodnoty mapy (existuje az pri hrani hry, ne pri navrhu) Viz fce ValueRead a ValueWrite
+
+--------------------------------------------------------------------------------
+
+    GAME SYSTEM - systemove funkce
+    ===========
+    
+    TimeMode(): integer;
+        - vrati druh hry = (tm_RT, tmTB)
+    
+    FadeOut(ScriptFunction: string);
+        - Ztmavi projekci za 500 ms a pak spusti ScriptFunction
+        
+    FadeIn(ScriptFunction: string);
+        - Ze tmy rozsviti projekci za 500 ms a pak spusti ScriptFunction
+        
+    SetKamera(x, y: integer);
+        - Zmìni pozici kamery na mapu (x,y)
+        
+    GoKamera(x, y: integer; [miliSec: integer; FncName: string]);
+        - Posouva pozici kamery na mapu (x,y) za dobu miliSec a pak spusti funkci FncName  
+    
+    SetDateTime(dny, hodiny, minuty: integer);
+        - Nastvi herni cas.
+    
+    GetDateTime(OUT dny, OUT hodiny, OUT minuty: integer);
+        - Vrati herni cas.
+        
+    gValueRead(Name: string; OUT Value: variable; Default: variable = 0 );
+        - v promenne Value vrati z glomalnich hodnot(globalValue.ini) Name, pokud nebyla nalezena nacte se hodnota Default. 
+          Funkce ma uziti pro globalni vlastnosti hry, (napr: podpalil hrac mesto?; provedl hrac genocidu?; Pomohl hrac elfum).
+          zkratka informace ktere jsou potreba vedet po cele hre.
+              
+    gValueWrite(Name: string; Value: variable )
+        - Zapise do glomalnich hodnot(globalValue.ini) jmenem Name, hodnotu Value. 
+          Funkce ma uziti pro globalni vlastnosti hry, (napr: podpalil hrac mesto?; provedl hrac genocidu?; Pomohl hrac elfum).
+          zkratka informace ktere jsou potreba vedet po cele hre.
+          
+    ValueRead(Name: string; OUT Value: variable; Default: variable = 0 );
+        - v promenne Value vrati z lokalnich hodnot(*.ini) Name, pokud nebyla nalezena nacte se hodnota Default. 
+          Funkce ma uziti pro lokalni vlastnosti mapy, (napr: hrac urazil mlynare na teto mape; hrac se vesnici na teto mape zesmesnil).
+          zkratka informace ktere staci vedet jen na teto mape.
+              
+    ValueWrite(Name: string; Value: variable )
+        - Zapise do lokalnich hodnot(*.ini) jmenem Name, hodnotu Value. 
+          Funkce ma uziti pro lokalni vlastnosti mapy, (napr: hrac urazil mlynare na teto mape; hrac se vesnici na teto mape zesmesnil).
+          zkratka informace ktere staci vedet jen na teto mape.
+          
+    SetPlayList(1FileNameMP3: text; [1FileNameMP3: text], [2FileNameMP3: text],...)
+        - Natavi "play list" prehravani hudby na pozadi hry. Novy play list se projevi, az po dohrani aktualni mp3 skladby.
+          Ocekava se, ze kazda mapa bude mit vlastni playlist.      
+    
+    Log(text: string);
+        - zobrazi text jako zpravu ve hre (vlevo dole).
+        
+
+
+--------------------------------------------------------------------------------
+        
+    EVENT GLOBAL SCRIPT - funkce kterak lze podchytit globalni udalosti hry. ("~*.jez") 
+    ===================
+    OnStartMap();
+        - spusti se pri nastartovani hry, to znamena pri [New game] i pri [Continue game].  
+
+
+
+--------------------------------------------------------------------------------
+
+    EVENT MAP SCRIPT - funkce kterak lze podchytit udalosti mapy. (lokalni "*.jez" ) 
+    ================
+    
+    OnMapActive(); 
+        - funkce se spusti pokud je mapa nactena do swapovaci pameti. A pravdepodobne bude brzy pouzita.
+          (vhodny cas vytvorit necekane lokalni nepratele, nebo promenne lokalni pasti)                  
+    
+    OnMapDeactive(); 
+        - funkce se spusti pokud je mapa odebrana ze swapovaci pameti. A pravdepodobne nebude v brzke dobe pouzita.
+          (vhodny cas ulozit do lokalnich hodnot informace o lokalnich stavech)
+          
+    OnMapEnter();
+        - druzina vkrocila do mapy. (bere se potencionalni stred aktivnich jednotek hrace vkrocil do mapy)
+          (vhodny cas poslat nepratelskou lokalni jednotku na hrace)
+    
+    OnMapExit();
+        - druzina opustila mapu. (bere se potencionalni stred aktivnich jednotek hrace vkrocil do mapy)
+        
+    OnMapViewObject_ON(x, y, IdObject: integer);   
+        - druzina vidi objekt (objekt musi mit tuto vlastnost nastavenou v Editoru map), 
+          paramatry funkce jsou pozice objektu a jeho identifikator.  
+               
+    OnMapViewObject_OFF(x, y, IdObject: integer);   
+        - druzina prestala videt objekt (objekt musi mit vlastnost jako OnMapViewObject_ON), 
+          paramatry funkce jsou pozice objektu a jeho identifikator.
+          
+    OnMapClickObject(x, y, IdObject: integer);
+        - hrac klikl na objekt (objekt musi mit tuto vlastnost nastavenou v Editoru map),  
+          paramatry funkce jsou pozice objektu a jeho identifikator.  
+
+
+
+--------------------------------------------------------------------------------
+
+    tUnit - trida jednotek (ovladani jednotek ve scriptu) 
+    =====
+    
+    AddUnit(x, y, IdDefUnit, Player: integer ): tUnit;
+        - funkce zalozi jednotku na pozici [x,y], s IdDefUnit definici(viz Unit.csv) a ovlada ji hrac (pl_Hrac, pl_Neutral, pl_Nepritel)
+        
+    GetUnit( guid: string ): tUnit;
+        - vrati exitujici jednotku podle guidu
+                
+    GetListUnit( player: integer; type: integer; [teritorium: integer;] [X,Y: integer;] [Sort: integer;]) : arrayStringGuid;
+        - vrati jednotky 
+            player: (pl_Hrac, pl_Neutral, pl_Nepritel );
+            type: (tp_All, tp_OvlPlayer, tp_SelectPlayer);
+            teritorium: (tr_All, tr_OnPlace );
+                pokud (teritorium = tr_OnPlace) nasleduji parametry [x,y: Double; r: Double] jednotky v miste x,y a vzralenosti <= r
+            seradit: (sr_None, sr_Abeceda, sr_Nejbliz)
+            
+        
+        tUnit.guid: string;
+            - vrati guid jednotky
+            
+        tUnit.Face( [FileName: string] ): string;
+            - Oblicej jednotky jde nastavit nebo vratit FileName
+            
+        tUnit.Jmeno( [text: string] ): string;
+            - Jmeno jednotky jde nastavit nebo vratit
+        
+        tUnit.Rasa( [IdRace: integer; [JmenoRasy: string] ] ): integer;
+            - Rasa jednotky jde nastavit nebo vratit (ra_Unknovn, ra_Barbar, ra_Trpaslik, ra_Elf, ra_Clovek, ra_Magicky, ra_Zvire, ra_Stroj)
+            
+        tUnit.Uroven: integer;
+            - Vrati uroven jednotky 
+            
+        tUnit.AddZkusenost(exp: integer);
+            - Prida jednotce zkusenost         
+            
+        tUnit.Zivoty: integer;
+            - Vrati Zivoty 
+
+        tUnit.Zivoty_All_max: integer;
+            - Vrati maximalni pocet zivotu
+            
+        tUnit.SetZivoty(dmg: integer);
+            - Nastavi pocet zivoty 
+
+        tUnit.Mana: integer;
+            - Vrati pocet many
+            
+        tUnit.Mana_All_max: integer;
+            - Vrati maximalni pocet many
+            
+        tUnit.SetMana(mana: integer);
+            - Nastavi pocet many 
+         
+        tUnit.Damaged( dmg: integer );
+            - zrani jednotku za dmg zivotu     
+        
+        tUnit.Heal( dmg: integer );    
+            - vyleci jednotku za dmg zivotu     
+        
+        tUnit.Move( x, y: integer; [inDoor: boolean = false] );    
+            - jednotka pujde na pozici [x,y]. Pokud je na pozici [x,y] budova a inDoor=true pak vejde dovnitr a prestane byt ovladatelnou jednotkou     
+
+        tUnit.inBulding: boolean;    
+            - vrati zda je jednotka skryta uvnitr budovy     
+
+        tUnit.MoveOut;    
+            - jednotka pokud je uvnitr budovy vyjde ven
+            
+        tUnit.Talk(text: string; col: integer = $FFFFFF {RRGGBB} );
+            - jednotka rekne text    
+        
+        tUnit.AddItem( misto: integer; IdItem: integer; [Count: integer = 1] ): tItem; 
+            - Prida jednotce vec do vybavy
+                - misto: (mi_None, mi_Bag, mi_Odev, mi_RukaR, mi_RukaL,...?)
+                - IdItem: Identifikator veci
+                - Count. Pouze pro veci ktere lze sumovat (zlataky, sipy,..)
+        
+        tUnit.GetItem( misto: integer; [ixPosInBabaz: integer] ): tItem;
+            - vrati vybavu na zadanem miste. 
+                
+        tUnit.DroopItem( misto: integer; [ixPosInBabaz: integer] );
+            - polozi predemet / predmety na zem 
+             
+--------------------------------------------------------------------------------
+
+    tItem - trida veci. Vec neni samostatna trida,  (Item neexistuje bez vlastnika)
+    =====   vec muze mit jen 3 zvlastni vlastnosti  
+    
+        tItem.SetProperty( ix: int[1..3]; pr_vlastnost: integer; value: integer );
+        
+        tItem.GetProperty( ix: int[1..3]; OUT pr_vlastnost: integer; OUT value: integer );
+        
+        tItem.IdItem( [IdItem: integer] ): integer;
+            -  vrati nebo nastavi IdITEM
+        
+        tItem.Count( [cnt: integer] ): integer;
+            -  vrati nebo nastavi pocet veci ktere lze sumovat (pouze penize, sipy, atd...)
+
+================================================================================
+*/
