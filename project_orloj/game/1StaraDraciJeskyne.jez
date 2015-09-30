@@ -1,0 +1,59 @@
+/*
++==============================================================================+
+|                                                                              |
+| Progrovaci script: Jezabel (sicco)                                           |
+| script map                                                                   |                                          
++==============================================================================+
+*/
+/*
+pouze pro mapy *.map
+====================
+OnMapActive; => Mapa je nactena do swap memory (hrac s druzinou je jeste daleko, ale mapa se nacetla)
+OnMapDeactive; => Mapa je bude odebrana ze swap memory (hrac s druzinou patrne opousti oblast mapy, mapa bude ulozena a uvolnena z pameti)
+OnMapEnter;  => Hrac s druzinou vstoupil (cetralni pole vsech jednotek ktere ovlada hrac) na uzemi mapy
+OnMapExit;  => Hrac s druzinou opustil (cetralni pole vsech jednotek ktere ovlada hrac) mapu
+OnMapViewObject(x, y, IdObj); 
+*/
+//==============================================================================
+
+uses "script\constant.jez";
+var cMapName := 'StaraDraciJeskyne';
+
+//==============================================================================
+function OnMapActive
+{
+  Log(cMapName+" OnMapActive");
+};
+//==============================================================================
+function OnMapDeactive
+{
+  Log(cMapName+" OnMapDeactive");
+};
+//==============================================================================
+function OnMapEnter
+{
+  Log(cMapName+" OnMapEnter");
+};
+//==============================================================================
+function OnMapExit
+{
+  Log(cMapName+"OnMapExit");
+};
+//==============================================================================
+function OnMapViewObject_ON(x, y, IdObject)
+{
+  Log(cMapName+"OnMapViewObject_ON ("+x+", "+y+", "+IdObject+")");
+};
+//==============================================================================
+function OnMapViewObject_OFF(x, y, IdObject)
+{
+  Log(cMapName+"OnMapViewObject_OFF ("+x+", "+y+", "+IdObject+")");
+};
+//==============================================================================
+function OnMapClickObject(x, y, IdObject)
+{
+  Log(cMapName+"OnMapClickObject ("+x+", "+y+", "+IdObject+")");
+};
+//==============================================================================
+//==============================================================================
+//==============================================================================
