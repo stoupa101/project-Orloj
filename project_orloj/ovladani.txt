@@ -1,0 +1,15 @@
+
+[L mouse] - oznaceni jednotky/jednotek
+[`] - Oznaceni vsech jednotek
+[R mouse] - pokyn k chuzi
+[L Ctrl]+[R mouse] - jednotka se otoci za kurzorem.
+
+
+cheaty - musi se spustit s parametrem -CHEAT
+[D] - zrani jednotku na kterou ukazuje mys za 1zivot
+[K] - zabije jednotku na kterou ukazuje mys
+[H] - uzdravi jednotku na kterou ukazuje mys o 1zivot
+
+
+[Delete],[PgDn],[Home],[End] - nataci kameru
+
