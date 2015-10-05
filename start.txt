@@ -1,1 +1,16 @@
-Co dal?
+2015-10-05
+----------
+Q) Co je za dokumenty?
+A) start.txt, bojovySystem.txt, magie.txt, vlastnostiPostav.txt
+
+Q)Jak pouzivat dokumenty?
+A) Vysledkem by melo byt finalni zneni praviel jak co delat. Aby jsme se v tom vyznaly tak bych navrhoval urcita pravidla:
+   [N] - navrh poznamka k danemu tematu s navrhem jak to ma nebo by melo vypadat (jde o napady , ne smer jakym by to melo jit, muzes si i protirecit mezi [N] a [JM])
+   [JM] - tvoje konkretni poznamky a body k danemu tematu - ja budu mit [DS]
+   * odsouhlasno druhou stranou (a treba - nesouhlas) napr.
+       [JM] - sila nikdy nebude pouzita k vyrazeni dveri a (jelikoz sme dva tak to muze rovnou do dalsi faze, ale udeljme pravidlo pro vice lidi)
+       [JM]*DS  - sila .... - po odsouhlasni vetsinou zrusime  [] a nechame to jako pevny bod {pude-li to pres SVN tak mame historii vyvoje zarucenou}
+       pocitam s tim, ze nechame do tohodle kecat i ostatni (treba Lukase)
+       
+
+  

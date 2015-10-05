@@ -1,0 +1,82 @@
+# inspirace pravidlama D&D x s vlastni modifikaci!!!!!
+
+############ S L O V N I C E K ##############
+LVL: level
+CAP: omezeni
+TMP: temporary - docastne (cache, ...)
+
+########## V L A S T N O S T I ############
+
+Sila
+----
+- Urcuje kolik svalove hmoty ma dotycny jedinec (rozdil mezi barbarem, ci trpaslikem oproti elfovi, ci cloveku)
+- Ovlivnuje Utok na blizko, predevsim mnozstvi DMG dane utokem
+- Ovlivnuje vahu, ci mnozsvi predmetu v inventari - budeli to brane v potaz
+- Ovlivnuje popr. sanci na silove prvky ve hre - vyrazeni dveri, rozbiti pasti, zastrasovani (taunt)
+- lze rozsirit behem lvlovani - posilujes, dostanes silu navic  (rozdil mezi 'posilovanim' barbara a elfa)
+- Umoznuje pouziti tezkeho brneni, obourucnich zbrani a dalsich prvku pouze po dosazeni urcite hodnoty
+
+Obratnost
+---------
+- Urcuje jak je dana postava mrstna (zavality trpaslik VS slachovity elf)
+- Ovlivnuje sanci vyhnout se soboji jak na blizko, tak na dalku {dodge}
+- Ovlivnuje praci se zbranemi na dalku, ci male zbrane na blizko (luk, dyka, kord)
+- Umznuje pouziti zbrani na dalku od urcite hodnoty
+- Moznost prace s pasti (nastaveni nebo zniceni)
+
+Odolnost
+--------
+- Urcuje jak houzevnata postava je
+- Ovlivnuje pocet zivotu, popr. jeji regeneraci
+- Urcuje bonus ci penalizaci ve zraneni (vypaseny trpaslik ma jiny ubytek zdravi, nez vychrtly elf)
+- Ovlivnuje ochranu (rezistance), pred urcitymi vlivy (jed, slabost, ...)
+
+Inteligence
+-----------
+- zatim nic. viz magie.txt
+
+Moudrost
+--------
+- hodne velka budoucnost, jak rozlisit alchimii od kouzel (az po implementaci inteligence)
+
+Charisma
+--------
+- v prvnich fazich uplne mimo misu
+- ovlivnuje rozhovory a obchod
+
+Stesti
+------
+- Ovlivnuje jakoukoli nahodnou vec ve hre
+- zvysuje sanci na CRITICAL hit, ci DODGE (vyhnuti se utoku)
+
+
+########### C A P ##############
+- kazda postava ma ma soft a hard cap (omezeni - CAPacitu) co muze mit
+- hard CAP je dany rasou (nelze mit min ani vic nez jsou mezni hodnoty)
+- soft CAP urcuje, kolik bodu je potreba pro jeji zmenu (do urcite hodnoty stoji UPGRADE 1b, dal 2 body) - lze udelat nekolik vrstev (od dalsi hodnoty 3b.)
+
+
+
+########### L E V E L  ############
+
+Maximalni LVL
+-------------
+- predbezne dohoda na max lvl = 24
+
+Pocet bodu za level
+-------------------
+- kazdy LVL si hrac muze rozdelit 2 body
+
+
+Co se bude menit behem levelu
+-----------------------------
+- kazdy X. lvl zvednuti vlastnosti o 1 (X = 4lvly)
+
+
+############ DB ####################
+
+Navrh tabulek
+-------------
+- postava (at hrac ci nepritel) se zakladnim nastavenim hodnot
+- ted bud tabulka postupu na LVLu + omezeni ci bonusy (tmp vysledna)
+  nebo kazda postava svoji tabulku, s danym postupem a TMP 

@@ -1,0 +1,24 @@
+// Brano z pohledu hrace
+
+###########  U T O K ###############
+
+Rozdeleni utoku
+----------------
+- Utok na blizko (dosah 1 - 2 pole ; nuz VS obourucak)
+- Utok na dalku (min a max dostrel zbrane)
+- Moznost zavedeni tridy zbrani a jejich ovlivneni (tupe, secne, ..., primitivni[prak], specializace[savle])
+- Pocitat s kouzlama (zatim neimplemetovano)
+
+Utok na blizko
+--------------
+- Soucet sily postavy a zbrane
+
+Vypocet utoku na blizko
+-----------------------
+Sila + UCzbrane ....
+
+Utok na dalku
+-------------
+- Soucet obratnosti a zbrane
+
+###########  O B R A N A ###############
