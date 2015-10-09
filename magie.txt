@@ -1,1 +1,2 @@
-S magii je pocitano, ale v prvni fazi se ji budeme snazit maximalne eliminovat
+S magii je pocitano, ale v prvni fazi se ji budeme snazit maximalne eliminovat.
+Prvni implementace bude pres lahvicky a svitky.

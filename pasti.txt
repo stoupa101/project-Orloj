@@ -1,0 +1,36 @@
+Pasti
+---------
+Podsekce a-e jsou dany napevno a v prubehu textu se k temto konretnim bodum vztahuji urcite veci. Jejich seznam je v bode 1)
+Pasti lze vyuzit i na prepadeni neprateli ci otevirani tajnych dveri - viz priklady
+
+
+1) Kazda past ma tyto vlastnosti:
+1a) Trigger - oblast odkud se pas spousti (napr. misto kde se STOUPNE na dlazdici)
+1b) Destination - misto ktere past aktivuje (napr. zavaleni dveri)
+1c) Range - Oblast ve ktere je past dtekovatelna (napr. rozeznatelny drat je viditelny z jednoho metru)
+1d) Complexity - Obtiznost dane pasti, jak je mozne ji deaktivovat (jak je slozite odstranit dratek z pasti aniz by se spustila)
+1e) Markable - moznost oznacit trigger nebo vlastni past (lze oznacit drat, diry ze kterych strili sipky, ale ne strop ktery se propadne)
+
+2) Kontrolni HODY proti jednotlivym vlastnostem
+2a) Trigger muze byt spusten vzdy po vstoupeni do oblasti 1x1 kurzoru boj, kolem pasti. Ale mohou byt pasti spustitelne na pruchod postavy s vlastnosti vetsi nebo mensi nez je kriticka mez. (Napr. dlazdici spisti postava se silou nebo odolnosti vetsi nez 10 = je dostatecne tezka). Moznost mit i magicke pasti reagujici na urcite kouzlo ci pritomnost maga.
+2b) Vlastni past = lze pouzit zachrane hody na cilove oblasti (napr. obratnost proti sipum ze zdi, odolnost proti padajicimu kameni, ...)
+2c) Detekce pasti. Pasti lze detekovat v nekolika urovnich (v dane oblasti je past, zde je spostec a zde past, je to tento konkretni typ pasti)
+2d) Moznost odstraneni pasti. Past musi byt detekovana a mit oznacitelny trigger. Pote je moznost hodem na urcitou vlastnost (obratnost, stesti, popr. sila)
+2e) Po uspesnem detekovani lze past oznacit a udelat trigger nepruchodnym na volny pohyb
+
+3) Jednotky
+- pole = oblast souhlasici s kvadrovym kurzorem v bojovem systemu
+- bod = presne souradnice (s urcitym rozmezim) vztahujici se k dane mape mistnosti, zdi, ...
+- oblast = (viditelna, celkova) - pro zacatek kruhova oblast od zdroje dane bodem, ci polem s plnym nebo odeznivajicim ucinkem (napr. uspavaci plyn max u zdroje a % sance na konci)
+
+
+Priklady pasti
+-----------------
+a) naslapne misto, b) sipky ze zdi, c) 3pole, d)lehka, e)ano [podobne vypusti se plyn, vystreli zbran, ....]
+a) naslapne misto, b) zavaleni dveri, c) 3 pole, d) tezka, e) ano jen trigger [zriti se strop, provali se prehrada]
+a) naslapne misto, b) udeleni zraneni na tom samem miste, c) 3 pole, d) ruzna, e) ano  = treba past na medveda
+a) preruseni paprsku svetla, b) udeleni zraneni ze zdroje svetla, c) 3 pole od zdroje svetla, d) nemozne, e) ne - lze pouzit spec predmet na pruchod touto past
+a) oblast 1 - x policcek, b) vyvolani nepratel, c) ruzna, d) zvlastni (predtucha, velke stesti, ...), e) ne jen upozornit = prepadeni banditama
+a) kliknuti na urcite misto na zdi, b) otevreni dveri, c) 1 pole, d) spec (hledani tlacitka), e) ne, nalezeni znamena uspech = tajne pruchody
+
+ 
