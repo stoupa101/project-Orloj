@@ -1,2 +1,71 @@
-S magii je pocitano, ale v prvni fazi se ji budeme snazit maximalne eliminovat.
-Prvni implementace bude pres lahvicky a svitky.
+Návrh na magii a alchymii
+[JM] mùj názor. 
+
+Nemìlo by být mraky kouzel, mìlo by být málo kouzel a mìly by umìt zvrátit boj. Takže nechci žádný Fireball jedna, Fireball dva, Èervený blesk, zelený blesk, atd... Chci kouzla dìlají nìco vyjimeènýho. Telepatie, teleportace, nerkromancie, co dal...  pyromanie?
+
+planuju:
+neviditelnost 
+detector = videt neviditelne
+jed
+zapaleni jednotky 
+
+Ale myslim, ze jsou zbytecny kouzla: Prokleti, Osviceni, magicky stit. 
+
+
+
+Kouzla
+======
+-Leceni 1 (v RT castecne), v (TB nejde)
+-Leceni 2 (v RT castecne+ruseni negativ napr.slepota), v (TB castecne)
+-Leceni 3 (v RT uplne+ruseni negativ napr.slepota), v (TB castecne+ruseni negativ napr.slepota)
+
+-Telepatie 1 (TB Cteni mysli - ifno o jednotce)
+-Telepatie 2 (TB Zasteraseni - nepritel zahodi zbran a utika)
+-Telepatie 3 (TB Barseker - nepritel zautoci na vlastni ?nejblizsi? jednotku)
+-Telepatie 4 (TB ovladnuti mysli jednotky)
+-- pokud je v druzine telepat mohl by hrac videt co si "mysi" neutralni jednotky. Podobne jako kdyz mluvi.
+
+-Teleportace 1 RT i TB (pouze sebe)
+-Teleportace 2 RT i TB (pouze vlastni jednotky)
+-Teleportace 3 RT i TB (jakekoliv jednotky)
+
+-Nekromancie 1 (Stvoreni kostlivce a je casove omezen) pocen neomezen
+-Nekromancie 2 (Stvoreni kostlivce s mecenm/ nebo s lukem neni casove omezen) MAX 1
+-Nekromancie 3 (Stvoreni kostnateho jezdce strili i bojuje zblizka a neni casove omezen) MAX 1
+
+-Oslepeni - docasne
+-Neviditelnost - docasne
+-Fireball - utocne kouzlo
+-Blesk - utocne kouzlo
+-Magicky stit
+-Bistrozraky - dohled 2x daleko a vidi i pres prekazky(stromy)
+-Exorcismus - utocne kouzlo na nemrtve
+
+
+
+
+
+
+
+kouzla pro docane jednotky hrace
+Šaman / Druid - ovladnuti zvirete
+
+
+
+
+
+Alchyme
+=======
+Lahvièka života
+Lahvièka magie
+Velká lahvièka života
+Velká lahvièka magie
+Džinova láhev po otevøení vyletí džin a bojuje na stranì Alchymisty. Síla džina = síle alchymisty, který lahev vyrobil.
+Lahvièka neviditelnosti
+Lahvièka bistrozrakosti
+Lahvièka imunity vùdèi magii
+
+vyšší umìní alchymisty:
+Promìn pøedmìt ve zlato = zpenžení pøedmìtu, netøeba navštìvovat kupce.
+
+
