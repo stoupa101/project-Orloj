@@ -11,7 +11,7 @@ Sila
 ----
 - Urcuje kolik svalove hmoty ma dotycny jedinec (rozdil mezi barbarem, ci trpaslikem oproti elfovi, ci cloveku)
 - Ovlivnuje Utok na blizko, predevsim mnozstvi DMG dane utokem
-- Ovlivnuje vahu, ci mnozsvi predmetu v inventari - budeli to brane v potaz
+- Ovlivnuje vahu, ci mnozsvi predmetu v inventari - budeli to brane v potaz. Nebude, inventar je na mrizku.
 - Ovlivnuje popr. sanci na silove prvky ve hre - vyrazeni dveri, rozbiti pasti, zastrasovani (taunt)
 - lze rozsirit behem lvlovani - posilujes, dostanes silu navic  (rozdil mezi 'posilovanim' barbara a elfa)
 - Umoznuje pouziti tezkeho brneni, obourucnich zbrani a dalsich prvku pouze po dosazeni urcite hodnoty
@@ -71,6 +71,8 @@ Pocet bodu za level
 Co se bude menit behem levelu
 -----------------------------
 - kazdy X. lvl zvednuti vlastnosti o 1 (X = 4lvly)
+
+[JM] Co dohled?
 
 
 ############ DB ####################
