@@ -4,6 +4,120 @@
 LVL: level
 CAP: omezeni
 TMP: temporary - docastne (cache, ...)
+SM: smrtelne zraneni. Pri zraneni jednotky krome rasy Clovek,Trpaslik,Elf vetsim nez 80% jednotka padne k zemi a nemuze chodit,utocit,kouzlit. Ted kazdy kolo ztraci 1zivot.
+	[JM] - Mozna bych tezce zranene jednotce dovolil vstup do inventare, at muze alespon vypit lektvar zdravi.
+	[JM] - Co zvirata (medved, vlk), maji mit smrtelny zraneni, treba az 90%?
+
+AP: Akcni body pro soubojovy system. (ted 1bod na otoceni o 45stupnu, a 4body na posun o jedno pole, odecita se postih za zbroj)
+OM: Obranny mod. Jednotka objetuje cast AP a po cas OM aktivne vykryva utoky nepratel. (ted: Zapnuti OM stoji 6AP, vypnuti 2AP)
+
+
+########## RAROVE VLASTNOSTI ############
+Barbar: Jednotka silná a rychlá. 
+------
+	Ve scénáøi poèítám s více tlupy barbarù: 
+	- Severské. Kteøí vyznávají sílu a ocel. Predstava: ala Conan
+	- Pouštní. Jejich vyznání je: Cesta je krev. Tím myslím beduíni, karavany, otrokáøi i otroci, gladiátoøi. 
+	- Lid z bain. Sorta zlodìjù, námezdních vrahù, otrokù ale i šamanu vzıvajících démony a temnou magii.
+
+Klady:
+	+ Bojuje do posledního dechu. Ostatní jednotky pri SM(smrtelne zraneni) zraneni pres 80% padnou k zemi, nemuzou se hybat a cekaji na uzdraveni.
+	+ Muze se vyzbrojit dvouma zbranema.
+Zapor:
+	- Nepouziva zbroj, pouze stit.
+
+Zbroje: zadne
+Zbrane: (pro ktere mame grafiku)
+	jednorucni: (zde lze kombinovat i dvourucni zbrane. {mame grafiku i na dva kyje})
+		Dıka
+		Kyj	
+		Palice
+		Sekera
+	+stit
+	odourucni:
+		oštìp	
+		palice	 
+		kyj	
+	strelecka:
+		prak
+---------------------------------------------
+Clovek: rasa neutralni. Muze byt inteligentni (mam grafiku Carodeju, Mnichu, Inkvizitoru)
+------
+	Ve scenari pocitam z rozstepem lidskeho rodu na 
+		- Køesanskı, Tempáøi ve znamení køíe upalují èarodìjnice, vyhánìjí trpaslièí obchodníky a spíš ne krále, poslouchají arcibiskupa.
+		- A ty ostatní, co ctí staré pohanské bohy, kterım èarodìjové, nevadí. Nevadí jim ani elfskı léèitel, nebo trpaslièí kupec. 
+
+Klady: nevim (budto zadne, nebo neco civilizacniho skrze nabozenstvi, nebo zlodejstvi)
+Zápory: nevim, nemusi byt
+
+Zbroje: (pro ktere mame grafiku) pro cloveka beze zbroje grafiku nemame
+	kozena
+	supinova
+	platova
+Zbrane: (pro ktere mame grafiku)
+	jednorucni: 
+		meè	
+		meè bastard	
+		øemdich
+	+stit
+	odourucni:
+		halapartna	
+		obouruèní meè	
+	strelecka:
+		kuše
+---------------------------------------------
+Trpaslik: Jednotka Odolna a silna
+--------
+	Ve scenari: V trpaslicich horach, vladne vsem trpaslikum Cisar: "Ushir", svou moc opírá o zlato v horách a vynalézavé alchymisty. Ale ne plati císaøi daòì vydává se hodnì trpaslíkù do svìta jako dobrodruzi, váleèníci, kupci, alchymisti, kováøi, brusièi. (byl bych rád, kdyby trpaslíci mluvili moravskım hantecem, "bo e tak ogaøi u nich cypujù.")
+		
+Klady: 
+	+ Vidí stejnì daleko v noci jako ve dne. (nebojova abilita)
+	+ Zadna zbroj nedava postih na AP(akcni body)
+Zapor:
+	- Neumi pouzivat OM (obranny mod)
+	
+Zbroje: (pro ktere mame grafiku) pro trpaslika beze zbroje grafiku nemame
+	destickova
+	platova
+	mitrilova 
+Zbrane: (pro ktere mame grafiku)
+	jednorucni: 
+		kladivo/palice
+		sekera
+	+stit
+	odourucni:
+		obourucni kladivo	
+		obourucni sekera
+	strelecka:
+		kuše
+		bambitka (obouruèní zbraò)
+---------------------------------------------
+Elf: Jednotka Obratna a inteligentni
+---
+	Add scenar: Elfové nemají vùdce, v jejich usedlostech uvniø lesù panuje klid a mír, ctí své pøirozené autority druidy a èarodìje. Lze u nich najít vzácné zbranì, ale nevìøí cizincùm a vìtšina je k sobì nerada pouští. Na hranicích s lidmi, dochází k potyèkám, kde konèí pole a kde zaèíná les. Lidé si usurpují stále více místa, kácí stromy, pálí meze...
+	
+	
+Klady: 
+	+ Vidí pøes stromy, jako by se díval na pláni. (nebojova abilita)
+	+ ???? neco vymyslet
+Zapor:
+	- ???? neco vymyslet
+
+Zbroje: (pro ktere mame grafiku)
+	tunika = beze zbroje
+	šupinová
+
+Zbrane: (pro ktere mame grafiku)
+	jednorucni: 
+		dıka	
+		šavle
+	+stit
+	odourucni:
+		obourucní šavle (vypada to jako asijska zbran s ostrim na obou koncich, viz film pan prstenu)
+	strelecka:
+		kratky luk
+		dlouhy luk
+
 
 ########## V L A S T N O S T I ############
 
@@ -73,6 +187,7 @@ Co se bude menit behem levelu
 - kazdy X. lvl zvednuti vlastnosti o 1 (X = 4lvly)
 
 [JM] Co dohled?
+[JM] Jak se bude pocitat AP?
 
 
 ############ DB ####################
