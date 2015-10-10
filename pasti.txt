@@ -16,7 +16,7 @@ Pasti lze vyuzit i na prepadeni neprateli ci otevirani tajnych dveri - viz prikl
 2b) Vlastni past = lze pouzit zachrane hody na cilove oblasti (napr. obratnost proti sipum ze zdi, odolnost proti padajicimu kameni, ...)
 2c) Detekce pasti. Pasti lze detekovat v nekolika urovnich (v dane oblasti je past, zde je spostec a zde past, je to tento konkretni typ pasti)
 2d) Moznost odstraneni pasti. Past musi byt detekovana a mit oznacitelny trigger. Pote je moznost hodem na urcitou vlastnost (obratnost, stesti, popr. sila)
-2e) Po uspesnem detekovani lze past oznacit a udelat trigger nepruchodnym na volny pohyb
+2e) [JM] Po uspesnem detekovani, nebo po prvni aktivaci pasti, je pole automaticky pro vsechny hracovy jednotky nepruchozi! 
 
 3) Jednotky
 - pole = oblast souhlasici s kvadrovym kurzorem v bojovem systemu
@@ -29,8 +29,15 @@ Priklady pasti
 a) naslapne misto, b) sipky ze zdi, c) 3pole, d)lehka, e)ano [podobne vypusti se plyn, vystreli zbran, ....]
 a) naslapne misto, b) zavaleni dveri, c) 3 pole, d) tezka, e) ano jen trigger [zriti se strop, provali se prehrada]
 a) naslapne misto, b) udeleni zraneni na tom samem miste, c) 3 pole, d) ruzna, e) ano  = treba past na medveda
-a) preruseni paprsku svetla, b) udeleni zraneni ze zdroje svetla, c) 3 pole od zdroje svetla, d) nemozne, e) ne - lze pouzit spec predmet na pruchod touto past
 a) oblast 1 - x policcek, b) vyvolani nepratel, c) ruzna, d) zvlastni (predtucha, velke stesti, ...), e) ne jen upozornit = prepadeni banditama
-a) kliknuti na urcite misto na zdi, b) otevreni dveri, c) 1 pole, d) spec (hledani tlacitka), e) ne, nalezeni znamena uspech = tajne pruchody
+a) kliknuti na urcity objekt (pavucina, knihovna, truha), b) otevreni dveri, c) 1 pole, d) spec (hledani tlacitka), e) ne, nalezeni znamena uspech = tajne pruchody
+
+
+
+
+
+
+poznamka programatora:
+je otazkou jak se pasti budou do map vkladat, jestli v editoru (v editoru budou prehledny, ale bude to vic prace), nebo ve scriptu. (zatim to nespecha, rozmyslim)
 
  
