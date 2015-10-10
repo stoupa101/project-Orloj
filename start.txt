@@ -11,6 +11,7 @@ A) Vysledkem by melo byt finalni zneni praviel jak co delat. Aby jsme se v tom v
        [JM] - sila nikdy nebude pouzita k vyrazeni dveri a (jelikoz sme dva tak to muze rovnou do dalsi faze, ale udeljme pravidlo pro vice lidi)
        [JM]*DS  - sila .... - po odsouhlasni vetsinou zrusime  [] a nechame to jako pevny bod {pude-li to pres SVN tak mame historii vyvoje zarucenou}
        pocitam s tim, ze nechame do tohodle kecat i ostatni (treba Lukase)
-       
+   
+nn    
 
   
