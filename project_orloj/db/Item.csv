@@ -5,7 +5,7 @@ Id;Nazev;sumovat;ucel;boj;pocet_rukou;rasa_uziti;AB_uziti;Id_object;Dostrel;add_
 3;ZbrojKozena;0;2;1;0;CM;0;211;0;0;0;9;0;0;0;0;0;0;0;0;0;0;0;0;1;1;0;0;2;3;#Zborj_kozena(2x3).png
 4;Zlataky;1;0;1;0;UBTECM;0;237;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;#Zlataky(1x1).png
 5;KratkyLuk;0;1;2;2;EC;10;200;5;0;12;0;0;0;0;0;0;0;0;0;0;0;0;0;0;6;4;60;2;2;#kratky_luk(2x2).png
-6;Sip;1;0;1;1;TECM;0;208;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;#Sipy(1x1).png
+6;Sip;1;5;1;1;TECM;0;208;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;1;1;#Sipy(1x1).png
 7;ZbrojPlatova;0;2;1;0;CMT;0;589;0;0;0;18;0;0;0;0;0;0;0;0;0;0;0;1;2;3;0;0;2;3;#Zbroj_platova(2x3).png
 8;ZbrojSupinova;0;2;1;0;CM;0;590;0;0;0;15;0;0;0;0;0;0;0;0;0;0;0;1;1;2;0;0;2;3;#Zbroj_supinova(2x3).png
 9;StitMaly;0;3;1;1;UBTECM;0;236;0;0;0;6;0;0;0;0;0;0;0;0;0;0;0;0;0;4;0;0;1;2;#Stit_ocelovy(1x2).png
