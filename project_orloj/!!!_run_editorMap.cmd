@@ -1,1 +1,1 @@
-MapEdit.exe -BFI
+MapEdit.exe -BFI -CHEAT
