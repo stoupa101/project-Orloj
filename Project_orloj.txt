@@ -1,0 +1,7 @@
+Pravidla vývoje této hry:
+
+- Dìláme retro hru z konce 90let. Nemusíme být nejlepší v grafice, technologii a podobnì, ale kdyby jsme byli dobrý v hratelnosti bylo by to super! 
+- Dìláme to zadarmo, protože nás to baví. Chtìli by jsme udìlat ještì lepší hru, než tu která nás kdysi tolik bavila. Nedìláme to pro peníze, nedej bùh, pro slávu.
+- Šéf týmu jsem já.  Jan Mrkvièka (sicco)
+
+
