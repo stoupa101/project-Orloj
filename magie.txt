@@ -1,5 +1,45 @@
 Návrh na magii a alchymii
 [JM] mùj názor. 
+[DS]
+/*
+premejslej o magii jako o svitkach a lahvickach, magove pak budo mit vyhodu "permanentnich" svitku na ukor jineho boje.
+udelej z toho vyvoj a postupne zaclenovani do celkove hry (jak engine, tak pravidla) 
+Takze bych zacal Lehke leceni (at jako lahvicka, svitek ci nasledne kouzlo), Stredni leceni, ...
+Dal by mohlo byt posileni vlastnosti (sila, stesti, ...),  docastne schopnosti (ty co maji jednotlive postavy pri postupu - dvoji utok, ...), odlonosti (jed, ohen, ...)
+
+Alchimie = vyroba lahvicek ci svitku za pomoci urcitych surovin (at z okoli bylinky [klikatelny objekt a ziskas z nej 2 kvety toho a toho], nebo casti mobu [pavouci nohy, kosti])
+a nasledne se ucit recepty jak tyto komponenty davat dohromady a umet toto vyrobit (napr. alchimista musi mit v inv zakladni nebo lepsi set na vyrobu, urcity stupen schopnosti umet to spravne namichat)
+
+Celkove az bude funkcni bojovy system, mit moznost ziskat lahvicky (nakup, drop), pak implementovat alchimii (vyroba techto veci)
+Nasledne se muze udelat postava, ktera umi sesilat tyto veci bez fyzicke casti za podpory many (misto lahvicky cena za manu)
+Ve finale udelat rozdily mezi lahvickama a kouzlama a dat magum nove druhy kouzel. 
+
+Priklad:
+
+Faze:
+=====
+I. bez magie - svet historicky nikoli fantasy, zadna nadprirozena vec
+II. pouze lahvicky - itemy ziskatelne nakupem od obchodniku, ci sebrani lootu z truhel
+III. pocatky alchimie - baba bylinkarka, umeni vyrobit zakladni lahvicky svepomoci - umi kdokoli
+IV. prvni svitky - pouze cile questu, mocne artefakty, ktere dokazi udelat zazraky 
+V. alchimie - specializovana skola se svym stromem vyvoje, omezenim na dovednosti postav a moznost vyrobit jakoukoli lahvicku
+VI. era svitku - zde se daji zkouset jakekoli kouzla, pocatky vlastni magie
+VII. vznik many - postava s urcitymi vlastnostmi umi vyvolavat efekty svitku za urcity obnosen ergie (mana)
+VIII. pocatky magie - vznik prvni specializace na magii - prvni kouzelnici
+.... atd - tim by se udelal strom jak postupne zapojovat magii do hry
+ 
+Kouzla:
+=======
+Lehke leceni
+------------
+Popis: vrati postave X zivotu do jejiho maxima
+Pouziti: - poprve faze II. - vypiti lahvicky
+
+
+.... nechce se mi ted poustet do kouzel, to bych nechal az po ostatnich vecech
+
+
+*/
 
 Nemìlo by být mraky kouzel, mìlo by být málo kouzel a mìly by umìt zvrátit boj. Takže nechci žádný Fireball jedna, Fireball dva, Èervený blesk, zelený blesk, atd... Chci kouzla dìlají nìco vyjimeènýho. Telepatie, teleportace, nerkromancie, co dal...  pyromanie?
 

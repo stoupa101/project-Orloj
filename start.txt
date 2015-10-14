@@ -12,6 +12,9 @@ A) Vysledkem by melo byt finalni zneni praviel jak co delat. Aby jsme se v tom v
        [JM]*DS  - sila .... - po odsouhlasni vetsinou zrusime  [] a nechame to jako pevny bod {pude-li to pres SVN tak mame historii vyvoje zarucenou}
        pocitam s tim, ze nechame do tohodle kecat i ostatni (treba Lukase)
    
-nn    
+2015-10-13
+----------
+Zalozen dokument postup.txt, ve kterem by mel byt vyvoj cele hry rozdeleny do casovych a skupinovych bloku.
+Zde bude popsano i rozdeleni na engine, pravidla a pribeh.   
 
   

@@ -7,6 +7,7 @@ TMP: temporary - docastne (cache, ...)
 SM: smrtelne zraneni. Pri zraneni jednotky krome rasy Clovek,Trpaslik,Elf vetsim nez 80% jednotka padne k zemi a nemuze chodit,utocit,kouzlit. Ted kazdy kolo ztraci 1zivot.
 	[JM] - Mozna bych tezce zranene jednotce dovolil vstup do inventare, at muze alespon vypit lektvar zdravi.
 	[JM] - Co zvirata (medved, vlk), maji mit smrtelny zraneni, treba az 90%?
+  [DS] - dle me je tato polozka az na verzi +0.1 pravidel, nesnaz se vse delat najednou, zapsal bych tuto moznost do kolonku budouci verze, se vsemi poznamkami, ale neresil bych to ted hned
 
 AP: Akcni body pro soubojovy system. (ted 1bod na otoceni o 45stupnu, a 4body na posun o jedno pole, odecita se postih za zbroj)
 OM: Obranny mod. Jednotka objetuje cast AP a po cas OM aktivne vykryva utoky nepratel. (ted: Zapnuti OM stoji 6AP, vypnuti 2AP)

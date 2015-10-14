@@ -1,0 +1,22 @@
+Rozdeleni hry na zakladni skupiny:
+==================================
+A) Engine - vse co se tyka vlastni hry - programovani, databaze, scripty 
+B) Pravidla - uprava D&D pravidel k obrazu svemu
+C) Pribeh - Questy, historie, lore, ...
+
+
+Engine:
+=======
+- programovani, mapy, .... je to JM
+- navrh DB: zavisi na verzi vlastnich pravidlech na nejake minimalnio verzi
+[DS] .... zatim tu nemam co poradne napsat, preci jen je to na JM
+
+Pravidla:
+=========
+- Dat do kupy HLAVNE vlastnosti postav (soubor: vlastnostiPostav.txt)
+- Pokracovat bojem (soubor: bojovySystem.txt), ktere bude v prvni verzi jedine na cem bude zalezet
+- Rozsirit pravidla o dalsi podpurne systemy (soubor: pasti.txt, magie.txt)
+
+Pribeh:
+=======
+- vytvorit samostatny "koutek", pro tuto cast 
