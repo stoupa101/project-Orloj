@@ -1,8 +1,8 @@
-#### popis tabulek ####
+﻿#### popis tabulek ####
 - vsechny tabulky malim pismem s podtrzitkama misto mezer
 - kazda tabulka bude mit svuj prefix:
   - z_ zakladni
-  - t_ temporary
+  - t_ temporary (zatim neresime, zakladni nastaveni+pravidla pravdepodobne nebudou ve stejny DB a aktualni instance rozehrany hry)
 - kazda tabulka bude mit primarni klic ID (t_ volbu autouncrement, na z_ muze byt editor a id se muze urcovat {treba zly stoupa jako enemy chce mit id 101 :D })
 - nazvy sloupcu vse velkym pismem s podtrzitkama misto mezer
 - tabulky na ktere se odkazuje z kodu (vetsinou z_ ciselniky) by meli mit sloupecek KOD - uniqe text pro prehlednost (select * from a where kod = 'KOD' misto select * from a where id = x) cislo cloveku nerekne nic dokud se nepodiva cemu patri, kdezto KOD ma vypovidajici hodnotu o datech
@@ -18,6 +18,9 @@ kod - kodove oznaceni primarniho klice UNIQUE pouziva se v JOINech apod
 nazev - nazev postavy v CZ
 popis - popisek
 typ - hrac(elf, barbar), NPC(obchodnik, strazny), enemy(pavouk, ...)
+
+[JM] navrhuju typ zmenit na barbar, trpaslik,elf,clovek,magickaBytost,zvire,stroj. (to zda bude hrace, nebo ne neresit. Hrac by si klidne mohl ochocit vlka byla by to jednotka soucasti druziny, jen by nemela inventar)
+
 sil min - sila minimalni HARD cap
 sil max - maximalni HARD cap
 sil cap - max SOFT cap 
@@ -34,6 +37,8 @@ ap - vychozi pocet AP
 zivoty zaklad - zakladni pocet zivotu
 zivoty narust - o kolik se zvedne pocet zivotu per lvl
 
+[JM] jen detail, predpokladam, ze nazvy poicek budou bez mezer. Napr sil_min.
+
 priklad:
 ELF, lElf, spicaty usi, hrac, 5,5,5,5,5,5, ....
 ELF2, lElf, hodne maliny elfik, 4,4,4,4,4, ....
@@ -41,36 +46,6 @@ KRALOVA_GARDA, lKraluvZbrojnos, ochranka krale, x,x,x,x
 PAVOUK1, lPavouk, obycejny pavouk x,x,x,x
 PAVOUK2, lPavouk, zvlast zakerny pavouk, x,x,x,x,
 
-z_jazyk
-======
-id 
-kod - idealne dle ISO 639-1 (CS, EN, DE, ES, ....)
-nazev - jen popisek (Čeština, Angličtina, ...)
-
-z_preklad
-=======
-id 
-tabulka - cilova tabulka prekladu
-cizi_id - id dane tabulky
-jazyk_id - id daneho jazyka
-text - vlastni preklad
 
 
-t_postava
-=========
-(jde o tabulku konkretnich postav ktere jsou pouzite v dane instanci hry)
-id
-postava_id - odkaz na tabulku z_postava
-nazev - ?? lze tu mit upraveny nazev, napr. o tituly, ... {dovymyslet}
-popis - doplnujici popis k hlavnimu (napr. zlutym textem Hrdina bitvy o hrad A)
-sil - aktualni sila
-odo - aktualni odolnost
-obr - aktualni obratnost
-ste - aktualni stesti
-ap - aktualni pocet AP
-zivoty - aktualni pocet zivotu
 
-
-#### preklady #####
-- udelat FCI ktera vrati text k danemu zaznamu v danem jazyce 
-- kdyz dany preklad neexistuje muz vratit puvodni hodnotu (napr doplnenou o urcity text napr. EN_text)
