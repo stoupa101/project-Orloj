@@ -1,0 +1,57 @@
+/*
++==============================================================================+
+|                                                                              |
+| Progrovaci script: Jezabel (sicco)                                           |
+| script map                                                                   |                                          
++==============================================================================+
+*/
+uses "script\constant.jez";
+var cMapName := 'Interier'; // jmeno teto mapy
+
+//==============================================================================
+function OnMapActive
+{// Mapa je nactena do swap memory (hrac s druzinou je jeste daleko, ale mapa se nacetla)
+  Log(cMapName+" OnMapActive");
+};
+//==============================================================================
+function OnMapDeactive
+{// Mapa je bude odebrana ze swap memory (hrac s druzinou patrne opousti oblast mapy, mapa bude ulozena a uvolnena z pameti)
+  Log(cMapName+" OnMapDeactive");
+};
+//==============================================================================
+function OnMapEnter
+{// Hrac s druzinou vstoupil (cetralni pole vsech jednotek ktere ovlada hrac) na uzemi mapy
+  Log(cMapName+" OnMapEnter");
+};
+//==============================================================================
+function OnMapExit
+{// Hrac s druzinou opustil (cetralni pole vsech jednotek ktere ovlada hrac) mapu
+  Log(cMapName+" OnMapExit");
+};
+//==============================================================================
+function OnMapViewObject_ON(x, y, IdObject)
+{// Objekt na pozici x, y zacal byt spatren = vidi ho nejaka hracova jednotka
+  Log(cMapName+" OnMapViewObject_ON ("+x+", "+y+", "+IdObject+")");
+};
+//==============================================================================
+function OnMapViewObject_OFF(x, y, IdObject)
+{// Objekt na pozici x, y prestal byt spatren = prestala ho videt nejaka hracova jednotka
+  Log(cMapName+" OnMapViewObject_OFF ("+x+", "+y+", "+IdObject+")");
+};
+//==============================================================================
+function OnMapClickObject(x, y, IdObject)
+{// Bylo kliknuto na objekt mainpoint=(x,y). ZAVOLANI TETO FUNCKE PREDCHAZI NASTAVENI VLASTNOSTI OBJEKTU V EDITORU MAP 
+  Log(cMapName+" OnMapClickObject ("+x+", "+y+", "+IdObject+")");
+  if ((x = 13) and (y = -41) and (IdObject = 328)) then
+  {
+    OpenDoor(16,-42);
+  };
+  if ((x = 14) and (y = -41) and (IdObject = 371)) then
+  {
+    OpenDoor(4,56);
+  };
+  
+};
+//==============================================================================
+//==============================================================================
+//==============================================================================

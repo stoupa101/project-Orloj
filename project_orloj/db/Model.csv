@@ -1,17 +1,17 @@
-Id;FileName;Name;isZed;isPruchozi;isPruhledny;IdModelOpen;IdModelOpenObject;pole
---;--------;----;-----;----------;-----------;;;
-1;dvere1_ZED.mod;Zed s vchodem bez vrat;1;1;1;;;3
-2;dvere1_ZEDOBJ.mod;Zed s vchodem s vraty;1;0;0;2;32;3
-3;dvere2_ZED.mod;Zed1 bez dveri;1;1;1;;;2
-4;dvere2_ZEDOBJ.mod;Zed1 s dverma;1;0;0;3;33;2
-5;dvere3_ZED.mod;Zed2 bez dveri;1;1;1;;;1
-6;dvere3_ZEDOBJ.mod;Zed2 s dverma;1;0;0;6;34;1
-7;okno1_ZEDOBJ.mod;Zed s oknem 1;1;0;1;;;3
-8;okno2_ZEDOBJ.mod;Zed s oknem 2;1;0;1;;;3
-9;okno3_ZEDOBJ.mod;Zed s oknem 3;1;0;1;;;3
-10;okno4_ZEDOBJ.mod;Zed s oknem 4;1;0;1;;;3
-11;okno5_ZEDOBJ.mod;Zed s oknem 5;1;0;1;;;3
-31;pokus_ZEDOBJ.mod;pokus;1;0;0;;;3
-32;dvere1_OBJ.mod;vrata;0;1;1;;;3
-33;dvere2_OBJ.mod;dvere1;0;1;1;;;2
-34;dvere3_OBJ.mod;dvere2;0;1;1;;;1
+Id;FileName;Name;isZed;isPruchozi;isPruhledny;IdModelOpen;IdModelOpenObject;pole;isBridge;isDoor
+--;--------;----;-----;----------;-----------;;;;;
+1;dvere1_ZED.modl;Zed s vchodem bez vrat;1;1;1;;;3;0;0
+2;dvere1_ZEDOBJ.modl;Zed s vchodem s vraty;1;0;0;1;32;3;0;0
+3;dvere2_ZED.modl;Zed1 bez dveri;1;1;1;;;1;0;0
+4;dvere2_ZEDOBJ.modl;Zed1 s dverma;1;0;0;3;33;1;0;0
+5;dvere3_ZED.modl;Zed2 bez dveri;1;1;1;;;2;0;0
+6;dvere3_ZEDOBJ.modl;Zed2 s dverma;1;0;0;6;34;2;0;0
+7;okno1_ZEDOBJ.modl;Zed s oknem 1;1;0;1;;;3;0;0
+8;okno2_ZEDOBJ.modl;Zed s oknem 2;1;0;1;;;3;0;0
+9;okno3_ZEDOBJ.modl;Zed s oknem 3;1;0;1;;;3;0;0
+10;okno4_ZEDOBJ.modl;Zed s oknem 4;1;0;1;;;3;0;0
+11;okno5_ZEDOBJ.modl;Zed s oknem 5;1;0;1;;;3;0;0
+32;dvere1_OBJ.modl;Vrata;0;1;1;;;3;0;1
+33;dvere2_OBJ.modl;Dvere1;0;1;1;;;2;0;1
+34;dvere3_OBJ.modl;Dvere2;0;1;1;;;1;0;1
+35;most.modl;Most kamenny;0;1;1;;;0;1;0

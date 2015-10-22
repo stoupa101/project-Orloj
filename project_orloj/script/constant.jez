@@ -52,13 +52,30 @@ var mi_Toulec := 4; // misto pro naboje
 var mi_Bag := 5; // bagaz
 
 // Id Item
-var itm_Mec := 1;
-var itm_Stit := 2;
-var itm_Zbroj := 3;
+var itm_MecKratky := 1; //CE
+var ite_MecSiroky := 30; //CE
+var ite_Remdich := 11;//C
+var itm_MecDlouhy := 10;//C
+var itm_MecObourucni := 13; //C
+var ite_Halapartna := 12 ; //C
+
+var itm_KuseMala := 14; //CT
+var itm_KuseVelka := 15; //CT
+var itm_Bambitka := 16; //T
+var itm_LukLovecky := 5; // E
+var itm_LukDlouhy := 35; // E
+
+var itm_StitDreveny := 2; //BTEC
+var itm_StitMaly := 9; //BTEC
+var itm_StitOkovany := 20; //BTEC
+var itm_StitVelky := 21; //BTEC
+
+var itm_ZbrojKozena := 3; // C
+var ite_ZbrojSupinova := 8;// CE
+var ite_ZbrojPlatova := 7; //CT
+
 var itm_Zlataky := 4;
-var itm_Luk := 5;
 var itm_Sip := 6;
-var itm_Bambitka := 16;
 
 // pridana vlastnost veci tItem.SetProperty a tItem.GetProperty
 var i_none := 0;

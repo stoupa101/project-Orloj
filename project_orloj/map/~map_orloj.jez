@@ -17,7 +17,7 @@ function NewGame
     u.AddItem(mi_Toulec, itm_Sip, 100);
     u.AddItem(mi_Bag, itm_Zlataky, 100);
     u.Face("lovec.png");
-    u.Jmeno("Alia");
+    u.Jmeno("Duny");
     u.SetMana( 50 );
     
     u := AddUnit(8, 10, 43, p_Hrac);
@@ -33,7 +33,25 @@ function NewGame
     u.AddItem(mi_Bag, itm_Zlataky, 100); 
     u.AddItem(mi_RukaR, itm_Bambitka);
     u.Face("alchymistka.png");  
+    u.Jmeno("Oèko");
+
+    u := AddUnit(7, 6, 1, p_Hrac);
+    u.AddItem(mi_Bag, itm_Zlataky, 100); 
+    u.AddItem(mi_RukaR, itm_Bambitka);
+    u.Jmeno("Alia");
+
+    u := AddUnit(6, 6, 3, p_Hrac);
+    u.AddItem(mi_Bag, itm_Zlataky, 100); 
+    u.AddItem(mi_RukaR, itm_Luk);
+    u.AddItem(mi_Toulec, itm_Sip, 100);
+    u.Jmeno("Kolodìj");
+
+    u := AddUnit(7, 8, 6, p_Hrac);
+    u.AddItem(mi_Bag, itm_Zlataky, 100); 
+    u.AddItem(mi_RukaR, itm_Mec);
+    u.Face("Prachar.png");  
     u.Jmeno("Prachaø");
+
     
     v := DroopItem( 7, 12, itm_Stit);
     v.SetProperty(1, i_ObranneCislo, 3);
